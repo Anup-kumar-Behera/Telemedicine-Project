@@ -1,0 +1,83 @@
+#myname
+{
+    font-family :-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top : 10px;
+    margin-left : 20px;
+    font-size : 50px;
+    font-weight : bold;
+}
+
+.infoContainer
+{
+    margin-top : 5%;
+    
+    font-size : 20px;
+}
+.infoHeader{
+    font-family :'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-bottom : 0.5px solid black;
+    padding-left : 0;
+    padding-bottom :4px;
+    width : 90%;
+    margin-left : 2%;
+}
+.infoHeader h5
+{
+    font-size : 29px;
+}
+
+.labelStyle{
+    font-family :Georgia, 'Times New Roman', Times, serif;
+    font-size : 25px;
+    padding-left  : 20px;
+}
+.langStyle{
+    font-family :Georgia, 'Times New Roman', Times, serif;
+    font-size : 25px;
+    padding-left  : 20px;
+    color : blue;
+}
+
+.information {
+    color : blue;
+    font-size : 23px;
+    padding-left  : 20px;
+    font-family :'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+
+}
+
+
+
+
+.items{
+    color : blue;
+}
+
+.inputStyle{
+    padding : 5px; 
+    margin : 5px;
+    
+}
+.inputStyle input{
+    width : 90%;
+    height : 50px;
+    box-sizing: border-box;
+    border : 2px solid rgb(235, 221, 221); 
+    border-radius : 5px;
+    color : blue;
+
+}
+
+.inputStyle input:focus {
+    border :1px solid  blue
+}
+
+.tableStyle{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+    color: #333;
+    /* background: #f7f7f7; */
+    padding: 0;
+    margin: 0;
+}

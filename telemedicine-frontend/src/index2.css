@@ -1,0 +1,393 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 10px;
+  }
+  .img-thumbnail{
+    height:250px;
+    width:250px;
+  }
+  a{
+    text-decoration: none;
+  }
+  a:hover{
+    color:gray;
+  }
+  a.doc-name:hover{
+    text-decoration: none;
+    color:black;
+  }
+  /* .doc-profile{
+    height:300px;
+    width: 300px;
+  } */
+  .appointment:hover{
+    box-shadow: 0 0 1px 1px #999;
+  }
+  .profile-pic{
+    border-radius:50%;
+  }
+  .doc-image{
+    height:100px;
+    width:100px;
+  }
+  .doc-profile-image{
+    height:250px;
+    width:250px;
+  }
+  /* #root{
+    min-height: 100%;
+  } */
+  html, body, body > div, .app {
+    height: 100%;
+  }
+  /* .html {
+    height: 100%;
+  }
+  .body {
+    height:100%;
+  } */
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  /* #profile
+  {
+  
+    position : absolute;
+    width : 80%;
+    border : 1px solid black;
+    height : 80%;
+    top:20%;
+    left : 20%;
+  } */
+  #profile_image
+  {
+    width: 170px;
+    height:170px;
+  }
+  
+  
+  
+  .infoRowStyle{
+    font-family :'Times New Roman', Times, serif;
+    font-size : 20px;
+  }
+  
+  
+  .navbarStyle
+  {
+    padding-right : 20px;
+    padding-top : 5px;
+    font-size : 20px;
+  
+  }
+  .navStyle
+  {
+   padding-right : 10px;
+  }
+  
+  .navAncStyle
+  {
+    color : black;
+    font-family :Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  #nameStyle 
+  {
+    font-size : 30px;
+    font-weight : 550;
+    padding-bottom : 10px;
+    font-family :Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .profileContainer{
+    margin : 7% auto;
+  
+    box-sizing : content-box;
+    width : 60%;
+    height : 65%;
+    padding : 50px;
+   
+    -moz-box-shadow:    3px 3px 5px 6px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    box-shadow:         3px 3px 5px 6px #ccc;
+  
+  }
+  
+  #photoContainer
+  {
+    /* margin-top : 5%; */
+    margin-left : 3%;
+    margin-right : 10%;
+    margin-bottom : 6%;
+    /* padding-left : 5%; */
+  }
+  #content
+  {
+    margin-top : 20%;
+    padding-left : 0;
+  }
+  
+  #buttonRow
+  {
+    margin-top :  -2px;
+    padding : 0;
+    border-bottom : 2px solid rgb(236, 229, 229);
+  }
+  .toggleButton
+  {
+    margin-bottom : -2px;
+    padding : 0;
+    margin-right : 5%;
+    border : none;
+    background : none;
+    font-size : 19px;
+    font-weight : 500;
+  }
+  .highlighted
+  {
+    
+    color : blue;
+    border-bottom: 3px solid blue;
+  }
+  .rowStyle 
+  {
+    font-size : 18px;
+    font-weight : 450;
+    font-family :'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  .buttonStyle
+  {
+    border : none;
+    background-color : #EFEFEF;
+    /* opacity : 0.5; */
+    color : #7E7E7E;
+    margin-left : 20%;
+    font-size : 20px;
+    border-radius : 2px;
+  }
+  
+  .textStyle
+  {
+    color : blue;
+  }
+  .Container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .Container img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .Container .btn {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    width : 100%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 90%;
+    padding: 5px 0px;
+    opacity : 0.6;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .Container .btn:hover {
+    background-color: black;
+  }
+  
+  .formStyle
+  {
+    margin : 0 auto;
+    justify-content : center;
+    width : 600px;
+    border: 1px solid black;
+  }
+  
+  .formStyle button
+  {
+    margin : 0 auto;
+  }
+  
+  /* form styles */
+  
+  .formContainer
+  {
+    width : 100%;
+    height : 90%;
+  }
+  .formTitle
+  {
+    margin : 0 auto;
+  
+    width : 100%;
+    padding-left : 10%;
+   
+  }
+  .formTitle h5
+  {
+    font-size : 40px;
+    font-family :Verdana, Geneva, Tahoma, sans-serif;
+    font-weight : bold;
+  
+  }
+  
+  
+  .formContainer .user-details .input-box
+  {
+      width : 100%;
+  }
+  
+  .details
+  {
+    display: block;
+    font-size : 30px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  .input-box input
+  {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+  } 
+  
+  .input-box input:focus,
+  .input-box input:valid{
+    border-color: #9b59b6;
+  }
+  
+  .button
+  {
+    height: 45px;
+     margin: 35px 0;
+  }
+  .button input
+  {
+    height: 100%;
+    width: 40%;
+    border-radius: 5px;
+    margin-left: 20%;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* background: linear-gradient(135deg, #71b7e6, #9b59b6); */
+  }
+  
+  .button input:hover{
+    transform: scale(0.99);
+    background-color : #4267B2;
+    /* background: linear-gradient(-135deg, #71b7e6, #9b59b6); */
+    }
+  
+    .modalStyle
+    {
+      width : 100%;
+    }
+  
+  #imageSelector1
+  {
+    display : none;
+    visibility : none;
+  }
+  #imageSelector2
+  {
+    display : none;
+    visibility : none;
+  }
+  
+  .imageSection
+  {
+    height : 200px;
+    width : 200px;
+    border: 4px solid rgb(197, 194, 194);
+    justify-content : center;
+    margin-left : 5%;
+    margin-top : 2%;
+    padding : 0;
+    border-radius : 10px;
+  }
+  
+  .title
+  {
+    width : 100%;
+    border-bottom : 4px solid black;
+    margin-top : 2%;
+    
+  }
+  .title h5
+  {
+    font-family :Verdana, Geneva, Tahoma, sans-serif;
+    font-size : 40px;
+    margin-left : 60px;
+  }
+  .section
+  {
+    margin : 0;
+    padding : 0;
+    
+  }
+  
+  .icon
+  {
+    margin : 0 auto;
+  }
+  
+  .imgSelectLabel
+  {
+    cursor : pointer;
+  }
+  
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+  
+    text-align: center;
+  }
+  .middle button{
+    background :transparent;
+    border : none;
+  }
+  .imageSection:hover .img {
+    
+    opacity: 0.3; 
+  }
+  
+  .imageSection:hover .middle {
+    opacity: 1;
+  }
+  
+  .linkStyle
+  {
+    color : "inherit";
+    text-decoration : "none";
+  }
+  
+  

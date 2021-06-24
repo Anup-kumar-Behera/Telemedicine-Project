@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
+}
+
+.img-thumbnail{
+  height:250px;
+  width:250px;
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  color:gray;
+}
+a.doc-name:hover{
+  text-decoration: none;
+  color:black;
+}
+/* .doc-profile{
+  height:300px;
+  width: 300px;
+} */
+.appointment:hover{
+  box-shadow: 0 0 1px 1px #999;
+}
+.profile-pic{
+  border-radius:50%;
+}
+.doc-image{
+  height:100px;
+  width:100px;
+}
+.doc-profile-image{
+  height:250px;
+  width:250px;
+}
+/* #root{
+  min-height: 100%;
+} */
+html, body, body > div, .app {
+  height: 100%;
+}
+/* .html {
+  height: 100%;
+}
+.body {
+  height:100%;
+} */
+h3{
+  font-family: 'Acme', sans-serif;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
