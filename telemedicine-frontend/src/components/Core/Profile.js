@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Base from './Base'
-import Axios from 'axios'
+// import Axios from 'axios'
 export default class Profile extends Component {
     constructor(props) {
         super(props)
@@ -89,7 +89,7 @@ export default class Profile extends Component {
 
                                         return(
                                             <div className="col-md-3 imageSection">
-                                            <img src={image.url} key={`pres+${index}`}style={{height : "100%",width : "100%"}}/>
+                                            <img src={image.url} alt="Records" key={`pres+${index}`}style={{height : "100%",width : "100%"}}/>
                                             </div>
                                         )
                                     }):null
@@ -111,7 +111,7 @@ export default class Profile extends Component {
 
                                         return(
                                             <div className="col-md-3 imageSection">
-                                            <img src={image.url} key={`pres+${index}`}style={{height : "100%",width : "100%"}}/>
+                                            <img src={image.url} alt="Prescriptions" key={`pres+${index}`}style={{height : "100%",width : "100%"}}/>
                                             </div>
                                         )
                                     }):null

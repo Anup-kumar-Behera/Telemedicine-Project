@@ -1,11 +1,11 @@
-import React, {useState , useEffect } from 'react'
+import React from 'react'
 import {Link, useHistory } from 'react-router-dom'
 import {isAuthenticated} from '../Core/Auth'
 const Navbar =() =>  {
     const history = useHistory()
     console.log(localStorage.getItem('user'))
     const logout = (e) => {
-        e.preventDefault()
+        e.preventDefault() 
         localStorage.removeItem('email')
         localStorage.removeItem('user')
         history.push('/login')

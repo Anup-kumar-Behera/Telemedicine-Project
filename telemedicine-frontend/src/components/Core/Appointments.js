@@ -53,6 +53,7 @@ class Appointments extends Component {
                         res.data.appointments.map(data=>{
                             if(data.status===this.state.status)
                                 result.push(data)
+                            return true
                         })
                     }
                     
@@ -76,6 +77,7 @@ class Appointments extends Component {
                         res.data.appointments.map(data=>{
                             if(data.status===this.state.status)
                                 result.push(data)
+                            return true
                         })
                     }
                     

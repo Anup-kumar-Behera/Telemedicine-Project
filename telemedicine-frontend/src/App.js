@@ -10,7 +10,6 @@ import DocProfile from './components/Doctor/profile/DocProfile'
 import AppointmentBooking from './components/Patient/AppointmentBooking'
 import Profile from './components/Core/Profile'
 import Appointments from './components/Core/Appointments'
-import DocHome from './components/Doctor/DocHome'
 import DemoProfile from './components/Patient/profile/deomProfile.js/Profile'
 import Records from './components/Patient/medicalRecords/Records'
 export default class App extends Component {

@@ -22,12 +22,13 @@ const PatientSignup = () => {
             await patientSignup({name, email, password})
             .then(
                 res => {
-                    if(res.data.status === 1){
-                        alert('Account successfully added')
-                        history.push('/login')
-                    }else{
-                        alert('Sorry the email already has been taken')
-                    }
+                    // if(res.data.status === 1){
+                    //     alert('Account successfully added')
+                    //     history.push('/login')
+                    // }else{
+                    //     alert('Sorry the email already has been taken')
+                    // }
+                    console.log('signup', res)
                 }
                 
             )

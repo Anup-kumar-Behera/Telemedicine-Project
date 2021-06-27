@@ -9,11 +9,11 @@ import Base from "../../../Core/Base"
 
 
 function Profile() {
-    const imgStyle={
-        height : "100%",
-        width : "100%",
-        borderRadius : "10%",
-    }
+    // const imgStyle={
+    //     height : "100%",
+    //     width : "100%",
+    //     borderRadius : "10%",
+    // }
     const [info,setInfo] = useState({})
     const [address,setAddress] = useState({})
     const email = JSON.parse(localStorage.getItem("email"));
@@ -21,7 +21,7 @@ function Profile() {
         Axios.get(`http://localhost:3001/patient/profile/${email}`)
         .then(res=>{
 
-            if(res.data.status==1)
+            if(res.data.status===1)
             {
                 const user = res.data.user
                 console.log("user",user)

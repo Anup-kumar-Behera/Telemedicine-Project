@@ -56,7 +56,7 @@ function Info() {
             }
         ).then(res=>{
            
-            if(res.data.status==1)
+            if(res.data.status===1)
             {
                 alert("changes saved")
                 
@@ -85,7 +85,7 @@ function Info() {
                     <div className="row">
                         <input  disabled value={email} ></input>
                     </div>
-                </div>   
+                </div>
                 <div className="col-md-6 ">
                     <div className="row">
                         <label  className="labelStyle" htmlFor="phone" >phone</label>
@@ -93,7 +93,7 @@ function Info() {
                     <div className="row">
                         <input  value={values.phone} onChange={(e)=>setValues({...values,phone:e.target.value})}></input>
                     </div>
-                </div>   
+                </div>
             </div>
             <div className="row inputStyle">
                 <div className="col-md-6">
@@ -101,7 +101,7 @@ function Info() {
                         <label className="labelStyle" htmlFor="dob" >dob</label>
                     </div>
                     <div className="row">
-                        <input  value={values.dob} onChange={(e)=>setValues({...values,dob:e.target.value})}></input>
+                        <input type="date"  value={values.dob} onChange={(e)=>setValues({...values,dob:e.target.value})}></input>
                     </div>
                 </div>   
                 <div className="col-md-6">
@@ -109,7 +109,13 @@ function Info() {
                         <label className="labelStyle" htmlFor="gender" >gender</label>
                     </div>
                     <div className="row">
-                        <input  value={values.gender} onChange={(e)=>setValues({...values,gender:e.target.value})}></input>
+                        <select style={{textAlign:'center'}} value={values.gender} onChange={(e)=>setValues({...values,gender:e.target.value})} className="form-select" aria-label="Default select example">
+                                {/* <option selected>Open this select menu</option> */}
+                                <option value='male'>Male</option>
+                                <option value='female'>Female</option>
+                                <option value='others'>Others</option>
+                            </select>
+                        {/* <input  value={values.gender} onChange={(e)=>setValues({...values,gender:e.target.value})}></input> */}
                     </div>
                 </div>   
             </div>

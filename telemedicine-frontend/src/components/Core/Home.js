@@ -35,7 +35,7 @@ class Home extends Component {
                         //     confirmed.push(data)
                         else if(data.status==='pending')
                            pending.push(data)
-        
+                        return true
                     })
                     this.setState({...this.state,
                         isLoaded : true,
@@ -44,6 +44,8 @@ class Home extends Component {
                         user: data2.user
                     })
                     localStorage.setItem("name", data2.user.name)
+                }).catch(err => {
+                    console.log(err)
                 })
             this.componentUpdate()
             setInterval(this.componentUpdate, 2000)
@@ -55,8 +57,8 @@ class Home extends Component {
         }
         
     }
-    componentUpdate2 = () => {
-        fetch(`http://localhost:3001/doctor/appointments/${this.state.email}`).then(res => res.json())
+    componentUpdate2 = async () => {
+        await fetch(`http://localhost:3001/doctor/appointments/${this.state.email}`).then(res => res.json())
         .then((data) => {
             // console.log('data1: ', data);
             let pending = []
@@ -69,7 +71,7 @@ class Home extends Component {
                 //     confirmed.push(data)
                 else if(data.status==='pending')
                    pending.push(data)
-
+                return true
             })
 
             this.setState({
@@ -81,8 +83,8 @@ class Home extends Component {
             console.log(err)
         })
     }
-    componentUpdate = () => {
-            fetch(`http://localhost:3001/patient/appointments/${this.state.email}`).then(res => res.json())
+    componentUpdate = async () => {
+            await fetch(`http://localhost:3001/patient/appointments/${this.state.email}`).then(res => res.json())
             .then((data1) => {
                 // console.log('data1: ', data1);
                 let pending = []
@@ -95,7 +97,7 @@ class Home extends Component {
                     //     confirmed.push(data)
                     else if(data.status==='pending')
                        pending.push(data)
-    
+                    return true
                 })
                 console.log('pending:',pending)
                 console.log('data1:', data1.appointments)
@@ -104,6 +106,8 @@ class Home extends Component {
                     pendingAppointments: pending,
                     approvedAppointments: approved
                 })
+            }).catch(err => {
+                console.error(err)
             })
     }
     
@@ -136,6 +140,14 @@ class Home extends Component {
                                     <div className='d-flex justify-content-center'>
                                         <Link className='btn btn-secondary'  data-toggle="tooltip" title="Click to edit profile" to='/patient/profile'>Edit Profile</Link>
                                     </div>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+
+                                    <div className="d-flex justify-content-center btn-group"  >
+                                        <Link to = '/book_appointment' className="btn btn-success">Book Appointment</Link>
+                                        <Link to="/appointment" className="btn btn-danger">Emergency Booking</Link>
+                                    </div>
                                 </div>
                                 <div>
                                 </div>
@@ -144,7 +156,7 @@ class Home extends Component {
                                 <h3 style={{textAlign: 'center', margin:'20px'}}>Pending Appointments</h3>
                                 <hr/>
                                 {isLoaded? (
-                                <div style={{height:'auto', width:'100%'}}>
+                                <div style={{height:'auto', width:'100%', overflowY:'auto'}}>
                                     <Table dataFromApi={pendingAppointments} status="pending"/>
                                 </div>
                                 ):(
@@ -152,10 +164,7 @@ class Home extends Component {
                                         <h5 style={{textAlign: 'center'}}> No pending Appointments</h5>
                                     </div>
                                 )}
-                                <div className="d-flex justify-content-center btn-group sticky" style={{margin:'60px'}} >
-                                    <Link to = '/book_appointment' className="btn btn-success">Book Appointment</Link>
-                                    <Link to="/appointment" className="btn btn-danger">Emergency Booking</Link>
-                                </div>
+                               
                             </div>
                             <div className="col-sm">
                                 <h3 style={{textAlign: 'center', margin:'20px'}}>Approved Appointments</h3>
@@ -171,6 +180,7 @@ class Home extends Component {
                                 )}
                             </div>
                         </div>
+                        
                     </div>
                 ):(
                 <div className="container">

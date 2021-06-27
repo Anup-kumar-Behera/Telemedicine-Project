@@ -11,6 +11,13 @@ body {
     position: sticky;
     top: 10px;
   }
+  #footer {
+    position: fixed;
+    bottom: 0;
+    /* width: 100%; */
+    margin-bottom: 20px;
+    width:'200px'
+}
   .img-thumbnail{
     height:250px;
     width:250px;

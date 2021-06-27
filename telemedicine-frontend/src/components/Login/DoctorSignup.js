@@ -24,7 +24,7 @@ const DoctorSignup = () => {
                 await doctorSignup({name, email, password})
                 .then(
                     res => {
-                        if(res.data.status === 1){
+                        if(res.status === 200){
                             alert('Account successfully added')
                             history.push('/doctor_login')
                         }else{
